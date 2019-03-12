@@ -8,7 +8,7 @@ Requirements
 
 1. Allowed root ssh login
 2. Has to be run with ANSIBLE_HOST_KEY_CHECKING variable set to 'false'
-
+3. /home/ansible/.ssh/id_rsa contains public certificate
 
 Role Variables
 --------------
