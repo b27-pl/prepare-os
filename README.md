@@ -7,7 +7,7 @@ Requirements
 ------------
 
 1. Allowed root ssh login
-2. Has to be run with 
+2. Has to be run with ANSIBLE_HOST_KEY_CHECKING variable set to 'false'
 
 
 Role Variables
