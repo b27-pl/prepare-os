@@ -7,9 +7,8 @@ Requirements
 ------------
 
 1. Allowed root ssh login
-2. Root password set to "password"
+2. Has to be run with 
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
 
 Role Variables
 --------------
@@ -17,10 +16,10 @@ Role Variables
 
 defaults/main.yml
 ----
-ansible_user_password: `$6$mysecretsalt$MIJffjeQyfrKKrGkprGrDL/g2mCJa53koLmYQuuLmY9y37pDvGKPXU1Ov3RbMi.tpQ9cWvxAzUVtBLe7KrZoU.' #password
-ansible_user: root
-ansible_ssh_pass: password
-`
+
+    ansible_user_password: $6$mysecretsalt$MIJffjeQyfrKKrGkprGrDL/g2mCJa53koLmYQuuLmY9y37pDvGKPXU1Ov3RbMi.tpQ9cWvxAzUVtBLe7KrZoU.' #password
+    ansible_user: root
+    ansible_ssh_pass: password
 
 Dependencies
 ------------
@@ -43,6 +42,11 @@ Including an example of how to use your role (for instance, with variables passe
             state: restarted
         
 
+Run with:
+
+    $ ANSIBLE_HOST_KEY_CHECKING=false ansible-playbook -i inventory_file playbook_file
+    
+    
 License
 -------
 
